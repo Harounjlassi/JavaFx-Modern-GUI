@@ -141,7 +141,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <BorderPane prefHeight="483.0" prefWidth="678.0">
+                              <BorderPane prefHeight="483.0" prefWidth="678.0" stylesheets="@sample.css">
                                  <top>
                                     <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="858.0" spacing="10.0" BorderPane.alignment="CENTER">
                                        <children>

@@ -67,7 +67,7 @@ table-view .column-header,
 }
 .table-row-cell:selected {
 
-    -fx-background-color: rgb(EBE9F6);
+    -fx-background-color: #EBE9F6;
 }
 .table-row-cell:selected .text {
     -fx-fill: #52438F;
@@ -104,4 +104,47 @@ table-view .column-header,
 
 .chart-plot-background {
     -fx-background-color:transparent;
+}
+
+.chart-pie {
+
+    /*    -fx-border-color: derive (-fx-pie-color, 1%); */
+    -fx-border-width: 0px;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+
+.tab-pane
+{
+
+    -fx-tab-min-width:90px;
+        -fx-tab-min-height:30px;
+
+}
+.tab{
+    -fx-background-insets: 0 0 0 0,0,0;
+
+}
+.tab-pane .tab{
+    -fx-background-color: #FFFFFF;
+}
+.tab-pane .tab:selected
+{
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #6F5CC2;
+      -fx-border-color: #6F5CC2;
+    -fx-border-width: 0px 0px 2x 0px;}
+
+
+.tab tab-label {
+    -fx-alignment: CENTER; 
+    -fx-text-fill: #A5A9B4;
+/*    -fx-font-size: 12px; 
+    -fx-font-weight: bold;*/
+}
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #6F5CC2;
 }
