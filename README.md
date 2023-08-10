@@ -1,5 +1,5 @@
-# JavaFX Task Management Sample
+# JavaFX  Sample GUI 
 
 A project to showcase custom list views using fxml files - incorporating modern UI design systems.
 
-![](Screenshot.PNG)
+![](ScreenShot.PNG)
