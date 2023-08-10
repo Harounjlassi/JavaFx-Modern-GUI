@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="857.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleController">
     <stylesheets>
@@ -16,12 +21,114 @@
          <left>
             <VBox prefHeight="575.0" prefWidth="178.0" style="-fx-background-color: #6F5CC2;" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" stylesheets="@sample.css" text="Profile" textFill="WHITE" />
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="178.0" stylesheets="@sample.css" text="Profile" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding></Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="30.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" stylesheets="@sample.css" text="Users" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" stylesheets="@sample.css" text="Projects" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/projects.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="101.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" stylesheets="@sample.css" text="Tasks" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/tasks.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="147.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" stylesheets="@sample.css" text="Logs" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/logs.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" stylesheets="@sample.css" text="Chats" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/chat.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="238.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="183.0" stylesheets="@sample.css" text="Reports" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
                </children>
             </VBox>
          </left>
          <top>
-            <HBox prefHeight="62.0" prefWidth="858.0" style="-fx-background-color: #52438F;" BorderPane.alignment="CENTER" />
+            <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="858.0" style="-fx-background-color: #52438F;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label graphicTextGap="10.0" text="KeepToo MList" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/signature.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="35.0" />
+               </padding></HBox>
          </top>
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />

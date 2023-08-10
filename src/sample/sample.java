@@ -15,26 +15,42 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
  * @author msi
  */
 public class sample extends Application {
-    
+
+    double x, y = 0;
+
     @Override
-    public void start(Stage primaryStage) {
-       try {
+    public void start(Stage stage) throws Exception {
+       // try {
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
             /*appele aux fichiet qui regroupe tout lse element graphique de notre interface */
             Scene scene = new Scene(root);
+           stage.initStyle(StageStyle.UNDECORATED);
 
-            primaryStage.setTitle("Inscription");
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
+            //stage.setTitle("Inscription");
+            root.setOnMousePressed(evt -> {
+
+                x = evt.getSceneX();
+                y = evt.getSceneY();
+
+            });
+            root.setOnMouseDragged(evt -> {
+                stage.setX(evt.getScreenX()- x);
+                stage.setY(evt.getScreenY()- y);
+
+            });
+
+            stage.setScene(scene);
+            stage.show();
+//        } catch (IOException ex) {
+//            System.out.println(ex.getMessage());
+//        }
     }
 
     /**
@@ -43,5 +59,5 @@ public class sample extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }
