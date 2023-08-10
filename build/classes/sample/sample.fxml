@@ -4,6 +4,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="857.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleController">
+<AnchorPane id="AnchorPane" prefHeight="575.0" prefWidth="857.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleController">
     <stylesheets>
         <URL value="@sample.css" />
     </stylesheets>
@@ -131,7 +133,57 @@
                </padding></HBox>
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Members">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="483.0" prefWidth="678.0">
+                                 <top>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="858.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label graphicTextGap="10.0" text="Members" textFill="#6e6969">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="82.0" styleClass="button2" stylesheets="@sample.css" text="add new" textFill="#52438f" />
+                                          <Button layoutX="132.0" layoutY="24.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="143.0" styleClass="button2" stylesheets="@sample.css" text="Import members" textFill="#52438f" />
+                                          <Button layoutX="224.0" layoutY="24.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="154.0" styleClass="button2" stylesheets="@sample.css" text="export members(Excel)" textFill="#52438f" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="35.0" />
+                                       </padding>
+                                    </HBox>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Admins">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="858.0" style="-fx-background-color: #52438F;">
+                                 <children>
+                                    <Label graphicTextGap="10.0" text="KeepToo MList" textFill="WHITE">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="35.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
          </center>
       </BorderPane>
    </children>
